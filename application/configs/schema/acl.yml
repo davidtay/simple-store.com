@@ -1,0 +1,61 @@
+Default_Model_Role:
+  columns:
+    name: string(255)
+    default_role: int(1)
+  relations:
+    Resources:
+      class: Default_Model_Resource
+      refClass: Default_Model_RoleResource
+      foreignAlias: Roles
+      local: role_id
+      foreign: resource_id
+
+Default_Model_Resource:
+  actAs:
+    Timestampable:
+      created:
+        name: date_created
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: date_updated
+        type: timestamp
+        format: Y-m-d H:i:s
+  columns:
+    module: string(255)
+    controller: string(255)
+    action: string(255)
+    name: string(255)
+    routeName: string(255)
+
+Default_Model_RoleResource:
+  columns:
+    role_id:
+      type: integer
+      primary: true
+    resource_id:
+      type: integer
+      primary: true
+  relations:
+    Resource:
+      class: Default_Model_Resource
+      local: resource_id
+    Role:
+      class: Default_Model_Role
+      local: role_id
+
+Default_Model_UserRole:
+  columns:
+    user_id:
+      type: integer
+      primary: true
+    role_id:
+      type: integer
+      primary: true
+  relations:
+    User:
+      class: Default_Model_User
+      local: user_id
+    Role:
+      class: Default_Model_Role
+      local: role_id

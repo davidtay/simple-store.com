@@ -1,0 +1,9 @@
+<div class="section">
+	<h1>Books</h1>
+</div>
+
+<ul>
+	<?php  foreach ($this->categories() as $category):?>
+	<li><a href="/catalog/category/products/id/<?=$category->id?>"><?=$category->name?></a></li>
+	<?php  endforeach; ?>
+</ul>	

@@ -1,0 +1,76 @@
+Default_Model_User:
+  actAs:
+    Timestampable:
+      created:
+        name: date_created
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: date_updated
+        type: timestamp
+        format: Y-m-d H:i:s
+  columns:
+    firstname: string(255)
+    lastname: string(255)
+    email: string(255)
+    password: string(255)
+    salt: string(255)
+  relations:
+    Roles:
+      class: Default_Model_Role
+      refClass: Default_Model_UserRole
+      foreignAlias: Users
+      local: user_id
+      foreign: role_id
+    Addresses:
+      type: many
+      class: Default_Model_Address
+      local: id
+      foreign: user_id      
+  indexes:
+    email_unique:
+      fields: [email]
+      type: unique    
+
+
+      
+Default_Model_Address:
+  columns:
+    billing: 
+      type: int(1) 
+      length: 1
+      default: 0
+    shipping: 
+      type: int(1)
+      length: 1
+      default: 0
+    user_id: integer
+    name: string(50)
+    address: string(50)
+    city: string(50)
+    state: string(20)
+    zip: string(20)
+    phone: string(20)
+    date_created: datetime
+    date_updated: datetime
+  relations:
+    User:
+      class: Default_Model_User
+      local: user_id
+      foreign: id
+      
+Default_Model_Reset:
+  columns:
+    hash: string(255)
+    user_id: integer
+    expiration: integer(11)
+    reset:
+      type: tinyint(1)
+      notnull: true
+      unsigned: true
+  relations:
+    User:
+      class: Default_Model_User
+      local: user_id
+      foreign: id
+

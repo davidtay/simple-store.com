@@ -1,0 +1,145 @@
+Catalog_Model_Product:
+  Product_1:
+    name: I, Robot
+    author: Isaac Asimov 
+    price: 8.99
+    image: I_Robot.jpg
+    sku: 10001
+    description: 'Here are stories of robots gone mad, of mind-read robots, and robots with a sense of humor. Of robot politicians, and robots who secretly run the world--all told with the dramatic blend of science fact and science fiction that has become Asmiov&#39;s trademark.'
+  Product_2:
+    name:  2001
+    author: Arthur C. Clarke
+    price: 8.99
+    image: 2001.jpg
+    sku: 10002
+    description: 'When an enigmatic monolith is found buried on the moon, scientists are amazed to discover that it&#39;s at least 3 million years old. Even more amazing, after it&#39;s unearthed the artifact releases a powerful signal aimed at Saturn. What sort of alarm has been triggered? To find out, a manned spacecraft, the Discovery, is sent to investigate. Its crew is highly trained--the best--and they are assisted by a self-aware computer, the ultra-capable HAL 9000. But HAL&#39;s programming has been patterned after the human mind a little too well. He is capable of guilt, neurosis, even murder, and he controls every single one of Discovery&#39;s components. The crew must overthrow this digital psychotic if they hope to make their rendezvous with the entities that are responsible not just for the monolith, but maybe even for human civilization.'
+  Product_3:
+    name: The Martian Chronicles
+    author: Ray Bradbury
+    price: 8.99
+    image: Martian_Chronicles.jpg
+    sku: 10003
+    description: "Bradbury's Mars is a place of hope, dreams and metaphor-of crystal pillars and fossil seas-where a fine dust settles on the great, empty cities of a silently destroyed civilization. It is here the invaders have come to despoil and commercialize, to grow and to learn -first a trickle, then a torrent, rushing from a world with no future toward a promise of tomorrow. The Earthman conquers Mars ... and then is conquered by it, lulled by dangerous lies of comfort and familiarity, and enchanted by the lingering glamour of an ancient, mysterious native race."
+  Product_4:
+    name: Dune
+    author: Frank Herbert
+    price: 8.99
+    image: Dune.jpg
+    sku: 10004
+    description: "Here is the novel that will be forever considered a triumph of the imagination. Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Muad'Dib. He would avenge the traitorous plot against his noble family--and would bring to fruition humankind's most ancient and unattainable dream."
+  Product_5:
+    name: Neuromancer
+    author: William Gibson
+    price: 8.99
+    image: Neuromancer.jpg
+    sku: 10005
+    description: "Twenty years ago, it was as if someone turned on a light. The future blazed into existence with each deliberate word that William Gibson laid down. The winner of Hugo, Nebula, and Philip K. Dick Awards, Neuromancer didn't just explode onto the science fiction scene--it permeated into the collective consciousness, culture, science, and technology."
+  Product_6:
+    name: Do Androids Dream of Electric Sheep
+    author: Philip K. Dick
+    price: 8.99
+    image: Do_Androids_Dream_of_Electric_Sheep.jpg
+    sku: 10006
+    description: "By 2021, the World War had killed millions, driving entire species into extinction and sending mankind off-planet. Those who remained coveted any living creature, and for people who couldn't afford one, companies built incredibly realistic simulacrae: horses, birds, cats, sheep. . . They even built humans."
+  Product_7:
+    name: Starship Troopers
+    author: Robert A. Heinlein
+    price: 8.99
+    image: Starship_Troopers.jpg
+    sku: 10007
+    description: "In one of Robert Heinlein's most controversial bestsellers, a recruit of the future goes through the toughest boot camp in the Universe--and into battle with the Terran Mobile Infantry against mankind's most frightening enemy."
+  Product_8:
+    name: Second Variety
+    author: Philip K. Dick
+    price: 8.99
+    image: Second_Variety.jpg
+    sku: 10008
+    description: "This collection includes all of the writer's earliest short and medium-length fiction (including some previously unpublished stories) covering the years 1952-1955. These fascinating stories include Second Variety, Foster, You're Dead and The Father-Thing, and many others."
+  Product_9:
+    name: I Am Legend
+    author: Richard Matheson
+    price: 8.99
+    image: I_Am_Legend.jpg
+    sku: 10009
+    description: "Robert Neville may well be the last living man on Earth . . . but he is not alone. An incurable plague has mutated every other man, woman, and child into bloodthirsty, nocturnal creatures who are determined to destroy him. By day, he is a hunter, stalking the infected monstrosities through the abandoned ruins of civilization. By night, he barricades himself in his home and prays for dawn...."
+  Product_10:
+    name: The Postman
+    author: David Brin
+    price: 8.99
+    image: Postman.jpg
+    sku: 10010
+    description: "This is the story of a lie that became the most powerful kind of truth.  A timeless novel as urgently compelling as War Day or Alas, Babylon, David Brin's The Postman is the dramatically moving saga of a man who rekindled the spirit of America through the power of a dream, from a modern master of science fiction. He was a survivor--a wanderer who traded tales for food and shelter in the dark and savage aftermath of a devastating war.  Fate touches him one chill winter's day when he borrows the jacket of a long-dead postal worker to protect himself from the cold.  The old, worn uniform still has power as a symbol of hope, and with it he begins to weave his greatest tale, of a nation on the road to recovery."    
+  Product_11:
+    name: Childhood's End
+    author: Arthur C. Clarke
+    price: 8.99
+    image: Childhoods_End.jpg
+    sku: 10011
+    description: "The Overlords appeared suddenly over every city--intellectually, technologically, and militarily superior to humankind. Benevolent, they made few demands: unify earth, eliminate poverty, and end war. With little rebellion, humankind agreed, and a golden age began. But at what cost? With the advent of peace, man ceases to strive for creative greatness, and a malaise settles over the human race. To those who resist, it becomes evident that the Overlords have an agenda of their own. As civilization approaches the crossroads, will the Overlords spell the end for humankind . . . or the beginning?"
+  Product_12:
+    name: War of the Worlds
+    author: H.G. Wells
+    price: 8.99
+    image: War_of_the_Worlds.jpg
+    sku: 10012
+    description: "This is the granddaddy of all alien invasion stories, first published by H.G. Wells in 1898. The novel begins ominously, as the lone voice of a narrator tells readers that 'No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's...'"
+  Product_13:
+    name: The Man in the High Castle
+    author: Philip K. Dick
+    price: 8.99
+    image: Man_in_the_High_Castle.jpg
+    sku: 10013
+    description: "It's America in 1962. Slavery is legal once again. the few Jews who still survive hide under assumed names. In San Francisco the I Ching is as common as the Yellow Pages. All because some 20 years earlier the United States lost a war--and is now occupied jointly by Nazi Germany and Japan."
+  Product_14:
+    name: The Number of the Beast
+    author: Robert A. Heinlein
+    price: 8.99
+    image: Number_of_the_Beast.jpg
+    sku: 10014
+    description: "When two male and two female supremely sensual, unspeakably cerebral humans find themselves under attack from aliens who want their awesome quantum breakthrough, they take to the skies -- and zoom into the cosmos on a rocket roller coaster ride of adventure and danger, ecstasy and peril."
+  Product_15:
+    name: The Difference Engine
+    author: William Gibson and Bruce Sterling 
+    price: 8.99
+    image: Difference_Engine.jpg
+    sku: 10015
+    description: "1855: The Industrial Revolution is in full swing, powered by steam-driven cybernetic Engines. Charles Babbage perfects his Analytical Engine, and the computer age arrives a century ahead of its time. Three extraordinary characters race toward a rendezvous with the future: Sybil Gerard--fallen woman, politician's tart, daughter of a Luddite agitator; Edward 'Leviathan' Mallory--explorer and paleontologist; Laurence Oliphant--diplomat, mystic, and spy. Their adventure begins with the discovery of a box of punched Engine cards of unknown origin and purpose. Cards someone wants badly enough to kill for."
+  Product_16:
+    name: The Time Machine
+    author: H. G. Wells
+    price: 8.99
+    image: Time_Machine.jpg
+    sku: 10016
+    description: "First novel by H.G. Wells, published in book form in 1895. The novel is considered one of the earliest works of science fiction and the progenitor of the 'time travel' subgenre. Wells advanced his social and political ideas in this narrative of a nameless Time Traveller who is hurtled into the year 802,701 by his elaborate ivory, crystal, and brass contraption. The world he finds is peopled by two races: the decadent Eloi, fluttery and useless, are dependent for food, clothing, and shelter on the simian subterranean Morlocks, who prey on them. The two races--whose names are borrowed from the Biblical Eli and Moloch--symbolize Wells's vision of the eventual result of unchecked capitalism: a neurasthenic upper class that would eventually be devoured by a proletariat driven to the depths."
+  Product_17:
+    name: Time and Again
+    author: Jack Finney
+    price: 8.99
+    image: Time_and_Again.jpg
+    sku: 10017
+    description: "'Sleep. And when you awake everything you know of the twentieth century will be gone from your mind. Tonight is January 21, 1882. There are no such things as automobiles, no planes, computers, television. 'Nuclear' appears in no dictionary. You have never heard the name Richard Nixon.' Did illustrator Si Morley really step out of his twentieth-century apartment one night -- right into the winter of 1882? The U.S. Government believed it, especially when Si returned with a portfolio of brand-new sketches and tintype photos of a world that no longer existed -- or did it?"
+  Product_18:
+    name: Federation
+    author: Judith Reeves-Stevens
+    price: 8.99
+    image: Federation.jpg
+    sku: 10018
+    description: "The crew of the 'USS Enterprise 1701' must rescue a scientist from the captors who want to use his skills to conquer the galaxy. In the meantime, 80 years in the future on the 'Enterprise 1701-D,' Picard must rescue a mysterious person whose safety is vital to the survival of the Federation."
+  Product_19:
+    name: Foundation
+    author: Isaac Asimov
+    price: 8.99
+    image: Foundation.jpg
+    sku: 10019
+    description: "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Sheldon, creator of the revolutionary science of psychohistory, can see into the future--to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save mankind, Seldon gathers the best minds in the Empire--both scientists and scholars--and brings them to a bleak planet at the edge of the Galaxy to serve as a beacon of hope for a fututre generations. He calls his sanctuary the Foundation. But soon the fledgling Foundation finds itself at the mercy of corrupt warlords rising in the wake of the receding Empire. Mankind's last best hope is faced with an agonizing choice: submit to the barbarians and be overrun--or fight them and be destroyed."
+  Product_20:
+    name: The Stand
+    author: Stephen King
+    price: 8.99
+    image: Stand.jpg
+    sku: 10020
+    description: "When a man escapes from a biological testing facility, he sets in motion a deadly domino effect, spreading a mutated strain of the flu that will wipe out 99 percent of humanity within a few weeks. The survivors who remain are scared, bewildered, and in need of a leader. Two emerge--Mother Abagail, the benevolent 108-year-old woman who urges them to build a community in Boulder, Colorado; and Randall Flagg, the nefarious 'Dark Man,' who delights in chaos and violence."
+    
+
+
+    

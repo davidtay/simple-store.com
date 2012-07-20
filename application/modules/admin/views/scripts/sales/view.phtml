@@ -1,0 +1,98 @@
+<div class="section">
+	<h1>View Order</h1>
+</div>
+
+<div>
+	<div class="section">
+		<div class="left half">
+			<h2>Order No. <?=$this->order->increment_id?></h2>
+			<h3>Bill To:</h3>
+			<div><?=$this->order->billing_name?></div>
+			<div><?=$this->order->billing_address?></div>
+			<div><?=$this->order->billing_city?>, <?=$this->order->billing_state?> <?=$this->order->billing_zip?></div>
+			<div><?=$this->order->billing_phone?></div>
+			<br />
+			<h3>Payment Details:</h3>
+			<div><label>Credit Card:</label> <?=Checkout_Model_Card::$cards[$this->order->card_type]['label']?></div>
+			<div><label>Number:</label> <?=$this->order->card_number?></div>
+			<div><label>Expiration:</label> <?=date("m/y",strtotime($this->order->card_exp))?></div>
+			<div><label>Security Code:</label> <?=$this->order->card_csc?></div>
+		</div>
+		<div class="right half">
+			<h2>Status: <?=Checkout_Model_Order::getStatus($this->order->status)?></h2>
+			<h3>Ship To:</h3>
+			<div><?=$this->order->shipping_name?></div>
+			<div><?=$this->order->shipping_address?></div>
+			<div><?=$this->order->shipping_city?>, <?=$this->order->shipping_state?> <?=$this->order->shipping_zip?></div>
+			<div><?=$this->order->shipping_phone?></div>
+		</div>	
+	</div>
+	
+	<div>
+		<table style="width:100%" class="data-table cart-table">
+			<thead>
+				<tr>
+					<th style="width:50%">Product</th>
+					<th style="width:10%">Unit Price</th>
+					<th style="width:10%">Quantity</th>
+					<th style="width:10%">Subtotal</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php 
+				$i = 0;
+				$subtotal = 0;
+				foreach ($this->items as $id=>$item): 
+					$qty = $item['qty']; 
+					$product = Doctrine_Core::getTable('Catalog_Model_Product')->find($id); 
+					$oddEven = ($i%2==0) ? "even" : "odd";
+					?>
+				<tr class="<?=$oddEven?> <? if ($i==0): ?>first<? elseif ($i==count($this->items)-1): ?>last<?php endif; ?>">
+					<td class="a-left">
+						<div><a href="/catalog/product/index/id/<?=$product->id?>"><?=$product->name?></a></div>
+						<div><label>Sku</label>: <?=$product->sku?></div>
+					</td>
+					<td><?=$product->price?></td>
+					<td><?=$qty?></td>
+					<td><?=$qty*$product->price?></td>
+				</tr>
+			<?php 
+					$i++;
+				endforeach;
+			?>
+			</tbody>
+			<tfoot>
+				<tr class="first">
+					<td colspan="2">
+						<button class="button" onclick="setLocation('/admin/sales')"><span>Back</span></button>
+						<?php if ($this->canCancel):?>
+						<button class="button" onclick="setLocation('/admin/sales/cancel/id/<?=$this->order->id?>')"><span>Cancel</span></button>
+						<?php endif; ?>
+						<?php if ($this->canInvoice):?>
+						<button class="button" onclick="setLocation('/admin/sales/invoice/id/<?=$this->order->id?>')"><span>Invoice</span></button>
+						<?php endif; ?>
+						<?php if ($this->canShip):?>
+						<button class="button" onclick="setLocation('/admin/sales/ship/id/<?=$this->order->id?>')"><span>Ship</span></button>						
+						<?php endif; ?>
+					</td>
+					<td colspan="2">
+						<div><label>Subtotal</label>: <?=$this->order->sub_total?></div>
+						<div><label>Shipping</label>: <?=$this->order->shipping?></div>
+						<div><label>Tax</label>: <?=$this->order->tax?></div>
+						<div><label>Grand Total</label>: <?=$this->order->grand_total?></div>
+					</td>
+				</tr>
+	        	<tr class="last">
+	            	<td colspan="50" class="last">
+	            		<div class="center">
+
+	            		</div>
+	                </td>
+	            </tr>
+	        </tfoot>		
+		</table>
+	</div>    	
+	
+
+	
+</div>

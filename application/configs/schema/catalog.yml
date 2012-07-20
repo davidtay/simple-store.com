@@ -1,0 +1,47 @@
+Catalog_Model_Product:
+  columns:
+    name: string(50)
+    sku: string(50)
+    image: string(50)
+    author: string(50)
+    price: decimal
+    description: text
+  relations:
+    Categories:
+      class: Catalog_Model_Category
+      refClass: Catalog_Model_ProductCategory
+      foreignAlias: Products
+      local: product_id
+      foreign: category_id
+
+Catalog_Model_Category:
+  columns:
+    name: string(255)
+    parent_id: integer
+  relations:
+    Parent:
+      class: Catalog_Model_Category
+      local: parent_id
+      foreign: id
+    Products:
+      class: Catalog_Model_Product
+      refClass: Catalog_Model_ProductCategory
+      foreignAlias: Categories
+      local: category_id
+      foreign: product_id      
+
+Catalog_Model_ProductCategory:
+  columns:
+    product_id:
+      type: integer
+      primary: true
+    category_id:
+      type: integer
+      primary: true
+  relations:
+    Product:
+      class: Catalog_Model_Product
+      local: product_id
+    Category:
+      class: Catalog_Model_Category
+      local: category_id

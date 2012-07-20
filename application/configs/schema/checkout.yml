@@ -1,0 +1,52 @@
+Checkout_Model_Order:
+  columns:
+    increment_id: integer
+    method: string(50)
+    billing_name: string(50)
+    billing_address: string(50)
+    billing_city: string(20)
+    billing_state: string(20)
+    billing_zip: string(10)
+    billing_phone: string(20)
+    card_type: string(50)
+    card_number: string(50)
+    card_exp: date
+    card_csc: string(3)
+    shipping_name: string(50)
+    shipping_address: string(100)
+    shipping_city: string(20)
+    shipping_state: string(20)
+    shipping_zip: string(10)    
+    shipping_phone: string(20)    
+    reviewed: int(1)
+    cart: blob
+    sub_total: 
+      type: decimal(12)
+      scale: 2
+      unsigned: true     
+    shipping: 
+      type: decimal(12)
+      scale: 2
+      unsigned: true
+    tax: 
+      type: decimal(12)
+      scale: 2
+      unsigned: true      
+    grand_total: 
+      type: decimal(12)
+      scale: 2
+      unsigned: true    
+    status :
+      type: tinyint(1)
+      unsigned: true           
+    user_id: integer
+    session_id: varchar(255)
+    date_created: datetime
+    date_updated: datetime
+  relations:
+    User:
+      class: Default_Model_User
+      local: user_id
+
+
+ 

@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.11.11">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <apisDirectory enabled="false"/>
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+        <yamlSchemaDirectory/>
+        <dataFixturesDirectory/>
+        <migrationsDirectory/>
+        <sqlDirectory/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="about"/>
+          <actionMethod actionName="help"/>
+          <actionMethod actionName="movies"/>
+          <actionMethod actionName="name"/>
+          <actionMethod actionName="music"/>
+          <actionMethod actionName="tv"/>
+          <actionMethod actionName="contact"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Login">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="login"/>
+          <actionMethod actionName="register"/>
+          <actionMethod actionName="update"/>
+          <actionMethod actionName="forgot"/>
+          <actionMethod actionName="reset"/>
+          <actionMethod actionName="logout"/>
+        </controllerFile>
+        <controllerFile controllerName="Cart">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+      </controllersDirectory>
+      <formsDirectory enabled="false">
+        <formFile formName="Billing"/>
+        <formFile formName="Shipping"/>
+        <formFile formName="Method"/>
+        <formFile formName="Payment"/>
+        <formFile formName="Review"/>
+        <formFile formName="Orderadmin"/>
+      </formsDirectory>
+      <layoutsDirectory enabled="false"/>
+      <modelsDirectory/>
+      <modulesDirectory enabled="false">
+        <moduleDirectory moduleName="catalog">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false">
+            <yamlSchemaDirectory enabled="false"/>
+            <dataFixturesDirectory enabled="false"/>
+            <migrationsDirectory enabled="false"/>
+            <sqlDirectory enabled="false"/>
+          </configsDirectory>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Category">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="products"/>
+            </controllerFile>
+            <controllerFile controllerName="Product">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory>
+            <modelFile modelName="Product"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Category">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Category">
+                <viewScriptFile forActionName="products"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Product">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="checkout">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false">
+            <yamlSchemaDirectory enabled="false"/>
+            <dataFixturesDirectory enabled="false"/>
+            <migrationsDirectory enabled="false"/>
+            <sqlDirectory enabled="false"/>
+          </configsDirectory>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Cart">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="add"/>
+            </controllerFile>
+            <controllerFile controllerName="Onepage">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="save"/>
+              <actionMethod actionName="submit"/>
+              <actionMethod actionName="totals"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory>
+            <modelFile modelName="Cart"/>
+            <modelFile modelName="Tax"/>
+            <modelFile modelName="Method"/>
+            <modelFile modelName="Card"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Cart">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Cart">
+                <viewScriptFile forActionName="add"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Onepage">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Onepage">
+                <viewScriptFile forActionName="save"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Onepage">
+                <viewScriptFile forActionName="submit"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Onepage">
+                <viewScriptFile forActionName="totals"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="admin">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false">
+            <yamlSchemaDirectory enabled="false"/>
+            <dataFixturesDirectory enabled="false"/>
+            <migrationsDirectory enabled="false"/>
+            <sqlDirectory enabled="false"/>
+          </configsDirectory>
+          <controllersDirectory>
+            <controllerFile controllerName="Index">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Login">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Sales">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="view"/>
+              <actionMethod actionName="delete"/>
+              <actionMethod actionName="cancel"/>
+              <actionMethod actionName="invoice"/>
+              <actionMethod actionName="ship"/>
+            </controllerFile>
+            <controllerFile controllerName="Catalog">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Customer">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Reports">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="System">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory>
+            <formFile formName="Login"/>
+            <formFile formName="Order"/>
+          </formsDirectory>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory/>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Login">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Sales">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Catalog">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Customer">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Reports">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="System">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Sales">
+                <viewScriptFile forActionName="view"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Sales">
+                <viewScriptFile forActionName="invoice"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Sales">
+                <viewScriptFile forActionName="ship"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="sales">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false">
+            <yamlSchemaDirectory enabled="false"/>
+            <dataFixturesDirectory enabled="false"/>
+            <migrationsDirectory enabled="false"/>
+            <sqlDirectory enabled="false"/>
+          </configsDirectory>
+          <controllersDirectory/>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false"/>
+          <modelsDirectory>
+            <modelFile modelName="Sales"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory/>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+      </modulesDirectory>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="about"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="help"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="login"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="register"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="update"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="forgot"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="reset"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Login">
+            <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Cart">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="movies"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="name"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="music"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="tv"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="contact"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Sales">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Sales">
+            <viewScriptFile forActionName="cancel"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index"/>
+        </testApplicationControllerDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

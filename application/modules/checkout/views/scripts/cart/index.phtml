@@ -1,0 +1,83 @@
+<div class="section">
+	<h1>Shopping Cart</h1>
+</div>
+
+<?php if (is_array($this->items) && count($this->items)>0):?>
+<div>
+	<form name="cartForm" action="" method="post">
+		<table style="width:100%" class="data-table cart-table">
+			<thead>
+				<tr>
+					<th style="width:20%">Image</th>
+					<th style="width:50%">Product</th>
+					<th style="width:10%">Unit Price</th>
+					<th style="width:10%">Quantity</th>
+					<th style="width:10%">Subtotal</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php 
+				$i = 0;
+				$subtotal = 0;
+				foreach ($this->items as $id=>$item): 
+					$qty = $item['qty']; 
+					$product = Doctrine_Core::getTable('Catalog_Model_Product')->find($id); 
+					$oddEven = ($i%2==0) ? "even" : "odd";
+					$i++;
+					?>
+				<tr class="<?=$oddEven?> <? if ($i==0): ?>first<?php elseif($i==count($this->items)-1):?>last<?php endif; ?>">
+					<td>
+						<a href="/catalog/product/index/id/<?=$product->id?>">
+							<img class="" src="/images/catalog/product/<?=$product->image?>" style="width:60px;" />
+						</a>
+					</td>
+					<td>
+						<div><?=$product->name?></div>
+						<?php  if ($product->author): ?>
+						<div><em><?=$product->author?></em></div>
+						<?php  endif; ?>
+						<div><label>Sku</label>: <?=$product->sku?></div>
+						<div>
+							<?=substr($product->description,0,60)?>...
+							<a href="/catalog/product/index/id/<?=$product->id?>">Edit</a>
+						</div>
+					</td>
+					<td><?=$product->price?></td>
+					<td><input name="qtys[<?=$product->id?>]" type="text" size="4" class="input-text qty" value="<?=$qty?>" /></td>
+					<td><?=$qty*$product->price?></td>
+				</tr>
+			<?php endforeach;?>
+			</tbody>
+			<tfoot>
+	        	<tr class="first last">
+	            	<td colspan="50" class="a-right last">
+		                <button type="button" title="Continue Shopping" class="button btn-continue">
+		                	<span><span>Continue Shopping</span></span>
+		                </button>
+	                	<button type="submit" title="Update Shopping Cart" class="button btn-update" onclick="return updateCart()">
+	                		<span><span>Update Shopping Cart</span></span>
+	                	</button>
+	                </td>
+	            </tr>
+	        </tfoot>		
+		</table>
+	</form>
+	<div class="third right">
+		<div id="totals" class="inner">
+			<div><label>Subtotal</label>: <?=$this->subTotal?></div>
+			<div><label>Shipping</label>: <?=$this->shipping?></div>
+			<div><label>Tax</label>: <?=$this->tax?></div>
+			<div><label>Grand Total</label>: <?=$this->grandTotal?></div>
+	    	<button type="submit" title="Update Shopping Cart" class="button btn-update" onclick="return proceedToCheckout()">
+	        	<span><span>Proceed to Checkout</span></span>
+	        </button>
+         </div>
+	</div>
+</div>
+<?php else: ?>
+<div>
+	You have nothing in your cart at this time. 
+	Please return to the home page and continue shopping. 
+	<a href="/">Click here</a>
+</div>
+<?php endif; ?>

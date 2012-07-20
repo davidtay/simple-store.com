@@ -1,0 +1,94 @@
+<div class="section">
+	<h1>Checkout</h1>
+</div>
+
+<div id="accordion">
+    <h3><a href="#">Billing Information</a></h3>
+    <div class="form-parent"><?=$this->billingForm?></div>
+    <h3><a href="#">Shipping Information</a></h3>
+    <div class="form-parent"><?=$this->shippingForm?></div>
+    <h3><a href="#">Shipping Method</a></h3>
+    <div class="form-parent"><?=$this->methodForm?></div>
+    <h3><a href="#">Payment Information</a></h3>
+    <div class="form-parent"><?=$this->paymentForm?></div>
+    <h3><a href="#">Order Review</a></h3>
+    <div class="form-parent">
+	<?php if (is_array($this->items) && count($this->items)>0):?>
+		<div>
+			<form name="cartForm" action="" method="post">
+				<table style="width:100%" class="data-table cart-table">
+					<thead>
+						<tr>
+							<th style="width:50%">Product</th>
+							<th style="width:10%">Unit Price</th>
+							<th style="width:10%">Quantity</th>
+							<th style="width:10%">Subtotal</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php 
+						$i = 0;
+						$subtotal = 0;
+						foreach ($this->items as $id=>$item): 
+							$qty = $item['qty']; 
+							$product = Doctrine_Core::getTable('Catalog_Model_Product')->find($id); 
+							$oddEven = ($i%2==0) ? "even" : "odd";
+							$i++;
+							?>
+						<tr class="<?=$oddEven?> <? if ($i==0): ?>first<?php elseif($i==count($this->items)-1):?>last<?php endif; ?>">
+							<td class="a-left">
+								<div><a href="/catalog/product/index/id/<?=$product->id?>"><?=$product->name?></a></div>
+								<div><label>Sku</label>: <?=$product->sku?></div>
+							</td>
+							<td><?=$product->price?></td>
+							<td><?=$qty?></td>
+							<td><?=$qty*$product->price?></td>
+						</tr>
+					<?php endforeach;?>
+					</tbody>
+					<tfoot>
+			        	<tr class="first last">
+			            	<td colspan="50" class="last">
+			                	Forgot an Item? <a href="/checkout/cart">Edit Your Cart</a>.
+			                </td>
+			            </tr>
+			        </tfoot>		
+				</table>
+			</form>
+			<div class="third right">
+				<div id="totals" class="inner">
+					<div><label>Subtotal</label>: <?=$this->subTotal?></div>
+					<div><label>Shipping</label>: <?=$this->shipping?></div>
+					<div><label>Tax</label>: <?=$this->tax?></div>
+					<div><label>Grand Total</label>: <?=$this->grandTotal?></div>
+		         </div>
+			</div>
+		</div>    	
+	<?php endif; ?>
+   	<?=$this->reviewForm?>
+    </div>
+</div>
+
+<script type="text/javascript">
+	var available_indexes = [0];
+	$(function(){
+		$( "#accordion" ).accordion({
+			autoHeight: false,
+		    change: function(event, ui) {
+		        var newIndex = $(ui.newHeader).index('h3');
+		        if (jQuery.inArray(newIndex, available_indexes) == -1) {
+		            var oldIndex = $(ui.oldHeader).index('h3');
+		            $(this).accordion( "activate" , oldIndex );
+		            //alert('Panel is not available yet');
+		        }
+		    }
+		});
+
+		$('input[name=card_exp]').datepicker({
+			dateFormat: 'yy-mm-dd',
+			buttonImage: '/images/calendar.gif',
+			buttonImageOnly: true
+		});
+	});
+	
+</script>

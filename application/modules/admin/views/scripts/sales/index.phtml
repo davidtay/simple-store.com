@@ -1,0 +1,39 @@
+<div class="section">
+	<h1>Sales</h1>
+</div>
+
+<div>
+<?php  if (count($this->orders)):?>
+	<table width="100%">
+		<tr>
+			<th>Order #</th>
+			<th>Date Purchased</th>
+			<th>Bill to Name</th>
+			<th>Ship to Name</th>
+			<th>Grand Total</th>
+			<th>Status</th>
+			<th>Action</th>
+		</tr>
+		<?php  
+			foreach ($this->orders as $order):
+		?>
+		<tr>
+			<td><?=$order->increment_id?></td>
+			<td><?=date("M j, Y g:i:s A",strtotime($order->date_updated))?></td>
+			<td><?=$order->billing_name?></td>
+			<td><?=$order->shipping_name?></td>
+			<td><?=$order->grand_total?></td>
+			<td><?=Checkout_Model_Order::getStatus($order->status)?></td>
+			<td>
+				<a href="/admin/sales/view/id/<?=$order->id?>">View</a>
+			<?php	if ($order->status == Checkout_Model_Order::PENDING || $order->status == Checkout_Model_Order::PROCESSING): ?>				
+				| <a href="/admin/sales/cancel/id/<?=$order->id?>">Cancel</a>
+			<?php 	endif; ?>
+			</td>		
+		</tr>
+	<?php  endforeach;?>
+	</table>
+<?php  else:?>
+	There are no orders at this time.
+<?php  endif;?>
+</div>

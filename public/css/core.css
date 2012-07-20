@@ -1,0 +1,149 @@
+@CHARSET "ISO-8859-1";
+
+/*********************************************
+	CSS RESET
+*********************************************/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,fieldset,form,label,legend,caption{
+	background:transparent;
+}
+
+/* added for stuff added in pm ex: <font size="4">*/
+font{line-height:1em;}
+
+body{line-height:1;}
+:focus{outline:none;}
+a { outline: none; }
+a:focus { outline: none; }
+a:active { outline: none; }
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+
+
+/*********************************************
+	UTILITIES
+*********************************************/
+.clear{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;height:0;
+}
+
+/* clearfix - is used for clearing floats */
+.clearfix:after, div:after, ul:after{
+	clear:both;
+	content:' ';
+	display:block;
+	font-size:0;
+	line-height:0;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+
+.clearfix, div, ul{display:inline-block;}
+* html .clearfix{height:1%;}
+* html div{height:1%;}
+* html ul{height:1%;}
+.clearfix, div, ul{display:block;}
+
+
+/*********************************************
+	NAV LISTS
+*********************************************/
+ul.nav {
+	list-style-type:none; 
+	margin:0;
+	padding:0;
+}
+ul.nav li {
+	float:left;
+	margin:0;
+	padding:0 5px;
+	border-left:1px solid #000;
+}
+
+ul.simple {
+	list-style-type:none; 
+	margin:0;
+}
+
+ul.simple li { margin:0;}
+	
+	
+/*********************************************
+	DIV WIDTHS
+*********************************************/
+.full {width: 100% !important; }
+.half {width: 49.9% !important; }
+.third {width: 33.3% !important; }
+.twothirds {width: 66.7% !important; }
+.quarter {width: 25% !important; }
+.threequarters {width: 75% !important; }
+.fifth {width: 20% !important; }
+.twofifths {width: 40%  !important; }
+.threefifths {width: 60%  !important; }
+.fourfifths {width: 80%  !important; }
+.seventy{width:70% !important; }
+.thirty{width:30% !important; }
+.tenth{width:10% !important; }
+.nintenths{width:90% !important; }
+
+
+/*********************************************
+	Helper Classes
+*********************************************/
+a img{ border:0;}
+.left {float: left !important; }
+.right {float: right !important; }
+.center {text-align: center; }
+.center-block {margin: 0 auto !important;}
+.text-right {text-align: right; }
+.text-left {text-align: left; }
+.nowrap {white-space: nowrap; }
+.hidden {display: none;}
+.inline {display: inline; }
+.block {display: block; }
+.relative{position:relative;}
+.section{padding-bottom:16px;}
+.section-sm{padding-bottom:8px;}
+.no-border, .leadin{border:none !important; padding-left:0 !important; background-image:none !important;}
+img.right{margin: 0 0 10px 10px;}
+img.left{margin: 0 10px 10px 0;}
+.inner{padding:10px;}
+	.inner-right{padding-right:10px;}
+	.inner-left{padding-left:10px;}
+	.inner-top{padding-top:10px;}
+	.inner-bottom{padding-bottom:10px;}
+.pointer { cursor:pointer; }
+p{padding-bottom:10px;}
+
+
+/*********************************************
+	IE specific fixes
+*********************************************/
+/* png fix */
+*html img {behavior:url(/css/iepngfix.htc); }
+*html div{behavior:url(/css/iepngfix.htc); }
+*html a {behavior:url(/css/iepngfix.htc); }
+*html input{behavior:url(/css/iepngfix.htc); }
+*html h1 {behavior:url(/css/iepngfix.htc); }
+
+/* fixes drop down hover issues in IE6 when using ul menus http://www.xs4all.nl/~peterned/csshover.html */
+*html body {behavior: url(/css/csshover3.htc) }
+
+img {-ms-interpolation-mode: bicubic; /* fixes scaled images for IE6 and IE7 */}
+.round { behavior: url(/css/PIE.htc); position:relative; z-index:1;}

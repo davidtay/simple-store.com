@@ -1,0 +1,25 @@
+			<div class="header">
+				<div class="left header-title">Sci-Fi Store</div>
+				<div id="loggedInAs" class="right">
+					<?php echo $this->loggedInAs(); ?>
+				</div>
+				<div class="clear"></div>
+				<div class="">
+					<ul id="navbar">
+						<li><a href="/">Home</a></li>
+						<li><a href="/index/about">About</a></li>
+						<li><a href="/catalog">Books</a>
+							<ul>
+								<?php  foreach ($this->categories() as $category):?>
+								<li><a href="/catalog/category/products/id/<?=$category->id?>"><?=$category->name?></a></li>
+								<?php  endforeach; ?>
+							</ul>					
+						</li>
+						<li><a href="/index/movies">Movies</a></li>
+						<li><a href="/index/music">Music</a></li>
+						<li><a href="/index/tv">TV</a></li>
+						<li><a href="/index/help">Help</a></li>
+						<li><a href="/index/contact">Contact</a></li>
+					</ul>
+				</div>	
+			</div>

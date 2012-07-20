@@ -1,0 +1,31 @@
+<div class="section">
+	<h1><?=$this->category->name?> Books</h1>
+</div>
+
+<div>
+<?php	foreach($this->products as $product): ?>
+	<div class="section">
+		<div class="left quarter">
+			<a href="/catalog/product/index/id/<?=$product->id?>">
+				<img class="left" src="/images/catalog/product/<?=$product->image?>" style="width:100px;" />
+			</a>
+		</div>
+		<div class="left threequarters">
+			<div class="section">
+				<h2><?=$product->name?></h2>
+				<div><label>Author:</label> <strong><?=$product->author?></strong></div>
+				<div><label>Price:</label> <strong><?=$product->price?></strong></div>
+			</div>
+			<div class="section">
+			     <button type="button" title="Add to Cart" class="button btn-cart" 
+			     	onclick="addToCart(1,<?=$product->id?>)">
+			    	<span><span>Add to Cart</span></span>
+			     </button>
+			</div>
+			<div class="section">
+				<?=substr($product->description,0,150)?>... <a href="/catalog/product/index/id/<?=$product->id?>">Read More</a>
+			</div>
+		</div>
+	</div>
+<?php	endforeach;?>
+</div>

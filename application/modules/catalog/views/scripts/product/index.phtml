@@ -1,0 +1,26 @@
+<div class="section">
+	<h1></h1>
+</div>
+
+<div class="section">
+	<div class="left half">
+		<img src="/images/catalog/product/<?=$this->product->image?>" style="width:240px;" />
+	</div>
+	<div class="left half">
+		<h2><?=$this->product->name?></h2>
+		<div><label>Author:</label> <strong><?=$this->product->author?></strong></div>
+		<div><label>Price:</label> <strong><?=$this->product->price?></strong></div>
+		<div class="add-to-box">
+		   <div class="add-to-cart">
+		     <label for="qty">Qty:</label>
+		     <input type="text" name="qty" id="qty" maxlength="12" value="<?=$this->qty?>" title="Qty" class="input-text qty">
+		     <button type="button" title="Add to Cart" class="button btn-cart" 
+		     	onclick="addToCart($('input[name=qty]').val(),<?=$this->product->id?>)">
+		    	<span><span>Add to Cart</span></span>
+		     </button>
+		   </div>
+		</div>
+		<div><?=$this->product->description?></div>
+	</div>
+	
+</div>

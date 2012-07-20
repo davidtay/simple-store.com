@@ -1,0 +1,21 @@
+Catalog_Model_Category:
+  Category_1:
+    name: Hard Science Fiction
+  Category_2:
+    name: Soft Science Fiction
+  Category_3:
+    name: Cyberpunk
+  Category_4:
+    name: Military
+  Category_5:
+    name: Apocalypse
+  Category_6:
+    name: Alien
+  Category_7:
+    name: Alternate Universe
+  Category_8:
+    name: Steam Punk
+  Category_9:
+    name: Time Travel    
+  Category_10:
+    name: Space Opera

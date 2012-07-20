@@ -1,0 +1,30 @@
+Default_Model_User:
+  User_1:
+    firstname: David
+    lastname: Tay
+    email: david.tay20@gmail.com
+    password: 6858ba5f180b49c2414c8e98c0db42e6bdefd347
+    salt: 227f2477b50469b49800d92c82b846d9fc074b8e
+  User_2:
+    firstname: John
+    lastname: Doe
+    email: john@doe.com
+    password: 6858ba5f180b49c2414c8e98c0db42e6bdefd347
+    salt: 227f2477b50469b49800d92c82b846d9fc074b8e
+
+Default_Model_Role:
+  Role_1:
+    name: admin
+  Role_2:
+    name: customer
+    default_role: 1
+  Role_3:
+    name: guest
+
+Default_Model_UserRole:
+  UserRole_1:
+    user_id: 1
+    role_id: 1
+  UserRole_2:
+    user_id: 2
+    role_id: 2
