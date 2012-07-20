@@ -1,4 +1,7 @@
+Introduction
+
 This is a modular shopping cart system written in the Zend Framework (http://framework.zend.com/). Doctrine (http://www.doctrine-project.org/) is used as the object relational management system. I used ZFDoctrine, a Doctrine 1.2 port to the Zend Framework.
 
-Simple Store is inspired by Magento. Although Magento is supposedly built on top of the Zend Framework, Magento has its own application framework and bears very little resemblance to the conventions of
-a typical ZF application. Although, I am very comfortable with Magento, having developed for it at work, this is a Zend Framework project through and through. The application structure of this project bears little relation to Magento.
+Simple Store is inspired by Magento. Although Magento is supposedly built on top of the Zend Framework, Magento has its own application framework and bears very little resemblance to the conventions of a typical ZF application. Although, I am very comfortable with Magento, having developed for it at work, this is a Zend Framework project through and through. The application structure of this project bears little relation to Magento.
+
+This project was started for the Master of Software Engineering (M.S.E) program at Brandeis University. I graduated in May 2012 but hope to continue further developing this project.
